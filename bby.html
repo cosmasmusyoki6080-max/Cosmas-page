@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For My Queen 💜</title>
+  <link rel="stylesheet" href="lock.css">
+</head>
+
+<body>
+  <div class="full-bg-romance">
+    <h1>FOR MY QUEEN 💖</h1>
+    
+
+      <div class="romantic-messages">
+  <span class="floating-quote">"Every heartbeat whispers your name ❤️"</span>
+  <span class="floating-quote">"In a world of code and chaos, you are my calm 💜"</span>
+  <span class="floating-quote">"With you, every moment is a masterpiece ✨"</span>
+</div>
+    
+
+    <div class="buttons">
+      <a href="mut8.html" class="nav-btn">Back</a>
+      <a href="apple.html" class="nav-btn">Next</a>
+    </div>
+  </div>
+  <script>
+const quotes = document.querySelectorAll('.floating-quote');
+
+quotes.forEach(quote => {
+  function moveQuote() {
+    const x = Math.random() * (window.innerWidth - quote.clientWidth);
+    const y = Math.random() * (window.innerHeight - quote.clientHeight);
+    const rotate = (Math.random() * 40) - 20; // random rotation
+
+    quote.style.transform = `translate(${x}px, ${y}px) rotate(${rotate}deg)`;
+
+    const duration = 3000 + Math.random() * 3000; // 3-6s per move
+    setTimeout(moveQuote, duration);
+  }
+  moveQuote();
+});
+</script>
+</body>
+</html>
+<footer>
+  <div class="social-icons">
+    <a href="https://wa.me/254794220463" target="_blank">💬 WhatsApp</a>
+    <a href="https://facebook.com/cosmas cos" target="_blank">📘 Facebook</a>
+    <a href="https://github.com/cosmas" target="_blank">🐙 GitHub</a>
+  </div>
+</footer>

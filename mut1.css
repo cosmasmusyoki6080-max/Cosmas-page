@@ -1,0 +1,544 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* FULL PAGE BACKGROUND */
+.hero {
+  height: 100vh;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CONTENT BOX */
+.content {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 60px;
+  border-radius: 15px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* NAME */
+.content h1 {
+  color: purple;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* WELCOME TEXT */
+.content p {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* NEXT BUTTON */
+.next-btn {
+  text-decoration: none;
+  color: white;
+  background: purple;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.next-btn:hover {
+  background: #5e2b97;
+}
+
+/* FADE ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* HEARTS CONTAINER */
+.hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* HEART STYLE */
+.hearts span {
+  position: absolute;
+  font-size: 24px;
+  animation: fall 6s linear infinite;
+  opacity: 0.8;
+}
+
+/* DIFFERENT POSITIONS & SPEEDS */
+.hearts span:nth-child(1) {
+  left: 10%;
+  animation-duration: 5s;
+}
+
+.hearts span:nth-child(2) {
+  left: 25%;
+  animation-duration: 7s;
+}
+
+.hearts span:nth-child(3) {
+  left: 40%;
+  animation-duration: 6s;
+}
+
+.hearts span:nth-child(4) {
+  left: 55%;
+  animation-duration: 8s;
+}
+
+.hearts span:nth-child(5) {
+  left: 70%;
+  animation-duration: 5.5s;
+}
+
+.hearts span:nth-child(6) {
+  left: 85%;
+  animation-duration: 7.5s;
+}
+
+/* FALLING ANIMATION */
+@keyframes fall {
+  0% {
+    top: -10%;
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    top: 110%;
+    transform: translateX(20px) rotate(360deg);
+  }
+}
+.hero {
+  position: relative;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+@keyframes glow {
+  0% {
+    text-shadow:
+      0 0 5px rgba(128, 0, 128, 0.6),
+      0 0 15px rgba(128, 0, 128, 0.8),
+      0 0 30px rgba(128, 0, 128, 1);
+  }
+  50% {
+    text-shadow:
+      0 0 10px rgba(180, 80, 255, 0.9),
+      0 0 30px rgba(180, 80, 255, 1),
+      0 0 60px rgba(180, 80, 255, 1);
+  }
+  100% {
+    text-shadow:
+      0 0 5px rgba(128, 0, 128, 0.6),
+      0 0 15px rgba(128, 0, 128, 0.8),
+      0 0 30px rgba(128, 0, 128, 1);
+  }
+}
+/* ABOUT PAGE */
+.about-page {
+  min-height: 100vh;
+  padding: 120px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* background */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+
+  /* fade-in animation */
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* About Page Title */
+.about-page h1 {
+  font-size: 50px;
+  color: purple;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+  /* glow effect like page 1 */
+  text-shadow:
+    0 0 5px rgba(128,0,128,0.6),
+    0 0 15px rgba(128,0,128,0.8),
+    0 0 30px rgba(128,0,128,1);
+
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+/* Paragraphs */
+.about-page p {
+  font-size: 20px;
+  max-width: 700px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+/* Buttons */
+.about-page .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.about-page .buttons a {
+  text-decoration: none;
+  color: white;
+  background: purple;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.about-page .buttons a:hover {
+  background: #5e2b97;
+}
+/* SKILLS PAGE */
+.skills-page {
+  min-height: 100vh;
+  padding: 120px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* background */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/bg3.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+
+  /* fade-in animation */
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Page Title */
+.skills-page h1 {
+  font-size: 50px;
+  color: purple;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+  /* Glow effect */
+  text-shadow:
+    0 0 5px rgba(128,0,128,0.6),
+    0 0 15px rgba(128,0,128,0.8),
+    0 0 30px rgba(128,0,128,1);
+
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+/* Paragraph */
+.skills-page p {
+  font-size: 20px;
+  max-width: 700px;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* Skills List */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.skills-list li {
+  background: #1c1c1c;
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-size: 18px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+.skills-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+}
+
+/* Hover Effect */
+.skills-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(128,0,128,0.6);
+}
+
+/* Buttons */
+.skills-page .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.skills-page .buttons a {
+  text-decoration: none;
+  color: white;
+  background: purple;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.skills-page .buttons a:hover {
+  background: #5e2b97;
+}
+/* PROJECTS PAGE */
+.projects-page {
+  min-height: 100vh;
+  padding: 120px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* background image */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/bg4.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Page Title */
+.projects-page h1 {
+  font-size: 50px;
+  color: purple;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+  /* glow effect */
+  text-shadow:
+    0 0 5px rgba(128,0,128,0.6),
+    0 0 15px rgba(128,0,128,0.8),
+    0 0 30px rgba(128,0,128,1);
+
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+/* Paragraph */
+.projects-page p {
+  font-size: 20px;
+  max-width: 700px;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* Project Cards Container */
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Individual Project Card */
+.project-card {
+  background: #1c1c1c;
+  padding: 25px;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card Hover Effect */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(128,0,128,0.6);
+}
+
+/* Buttons */
+.projects-page .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.projects-page .buttons a {
+  text-decoration: none;
+  color: white;
+  background: purple;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.projects-page .buttons a:hover {
+  background: #5e2b97;
+}
+.projects-page {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("bg4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+/* CONTACT PAGE */
+.contact-page {
+  min-height: 100vh;
+  padding: 120px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* background image */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/bg5.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Page Title */
+.contact-page h1 {
+  font-size: 50px;
+  color: purple;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+  /* Glow effect */
+  text-shadow:
+    0 0 5px rgba(128,0,128,0.6),
+    0 0 15px rgba(128,0,128,0.8),
+    0 0 30px rgba(128,0,128,1);
+
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+/* Paragraph */
+.contact-page p {
+  font-size: 20px;
+  max-width: 700px;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* Contact Info List */
+.contact-info {
+  list-style: none;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.contact-info li {
+  background: #1c1c1c;
+  padding: 15px 25px;
+  margin: 10px 0;
+  border-radius: 15px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for each contact item */
+.contact-info li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(128,0,128,0.6);
+}
+
+/* Links inside contact info */
+.contact-info a {
+  color: #dda0dd;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.contact-page .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-page .buttons a {
+  text-decoration: none;
+  color: white;
+  background: purple;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.contact-page .buttons a:hover {
+  background: #5e2b97;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  resize: none;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.contact-form button {
+  background: purple;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #5e2b97;
+}

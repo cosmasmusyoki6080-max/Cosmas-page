@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cosjacq & My Queen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link to your main CSS -->
+  <link rel="stylesheet" href="lock.css">
+  ...
+<script src="chat.js"></script>
+
+</head>
+<body>
+
+  <!-- Love Section -->
+  <section class="love-section">
+    <div class="love-container">
+      <h1 class="glow-name">COSJACQ & JACQUELINE</h1>
+
+      <p class="love-text">
+        A journey of love, friendship, growth, and endless memories.
+        Built with passion, supported by love ❤️
+      </p>
+
+      <!-- Optional image -->
+      <img src="bg.jpg" alt="My Queen" class="love-photo">
+    </div>
+  </section>
+  <p id="love-quote" class="love-quote">
+  Love is not about perfection, it’s about connection ❤️
+</p>
+
+
+<script>
+  const quotes = [
+    "Love is composed of a single soul inhabiting two bodies ❤️",
+    "With you, every moment feels like home 💕",
+    "Love grows stronger when shared with the right person 💖",
+    "You are my today and all of my tomorrows 💗",
+    "In your smile, I see my favorite future 💞"
+  ];
+
+  let index = 0;
+  const quoteElement = document.getElementById("love-quote");
+
+  setInterval(() => {
+    quoteElement.style.opacity = 0;
+
+    setTimeout(() => {
+      index = (index + 1) % quotes.length;
+      quoteElement.textContent = quotes[index];
+      quoteElement.style.opacity = 1;
+    }, 500);
+  }, 4000); // change every 4 seconds
+</script>
+  
+
+  <!-- Chat Header -->
+  <h1 class="chat-title">COSJACQ CHAT</h1>
+
+  <!-- Chat Box -->
+  <div class="chat-container">
+    <div id="chat-box"></div>
+
+    <!-- Input Area -->
+    <div class="chat-input">
+      <select id="sender">
+        <option value="king">king</option>
+        <option value="Queen">Queen</option>
+      </select>
+      <!-- Emoji Picker -->
+<div class="emoji-picker">
+  <span onclick="addEmoji('😊')">😊</span>
+  <span onclick="addEmoji('😍')">😍</span>
+  <span onclick="addEmoji('😂')">😂</span>
+  <span onclick="addEmoji('❤️')">❤️</span>
+  <span onclick="addEmoji('💜')">💜</span>
+  <span onclick="addEmoji('🔥')">🔥</span>
+</div>
+
+      <input type="text" id="message" placeholder="Type your message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons">
+    <a href="mut7.html" class="btn">⬅ Back</a>
+    <a href="bby.html" class="btn">Next ➡</a>
+  </div>
+  <!-- Footer (same as other pages) -->
+  <footer class="site-footer">
+    <p>Connect with me</p>
+    <a href="https://wa.me/254794220463" target="_blank">
+      <div class="social-icons">
+  <a href="https://wa.me/254794220463" target="_blank">💬 WhatsApp</a>
+  <a href="https://facebook.com/cosmas cos" target="_blank">📘 Facebook</a>
+  <a href="https://github.com/cosmas" target="_blank">🐙 GitHub</a>
+</div>
+        <p>&copy; 2026 Cosjacq Portfolio</p>
+  </footer>
+
+</body>
+</html>
